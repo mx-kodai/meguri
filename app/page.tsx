@@ -22,7 +22,7 @@ export default function Home() {
             <a href="#day2" className="hover:text-forest transition-colors">2日目</a>
             <a href="#guide" className="hover:text-forest transition-colors">ガイド</a>
             <a href="#stay" className="hover:text-forest transition-colors">宿泊</a>
-            <a href="#booking" className="bg-forest text-white px-5 py-2 rounded-full hover:bg-forest-light transition-colors">
+            <a href="https://www.jalan.net/" target="_blank" rel="noopener noreferrer" className="bg-forest text-white px-5 py-2 rounded-full hover:bg-forest-light transition-colors">
               予約する
             </a>
           </div>
@@ -32,7 +32,9 @@ export default function Home() {
               電話
             </a>
             <a
-              href="#booking"
+              href="https://www.jalan.net/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-forest text-white text-sm px-4 py-2 rounded-full"
             >
               予約
@@ -50,7 +52,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-end pb-20 pt-32 md:pt-0 md:items-center overflow-hidden bg-charcoal">
         <img src="/kari/hero.jpg" alt="フットパス連絡橋を渡るガイドと参加者" className="absolute inset-0 w-full h-full object-cover hidden md:block" />
         <img src="/kari/hero-sp.jpg" alt="フットパス連絡橋を渡るガイドと参加者" className="absolute inset-0 w-full h-full object-cover md:hidden" />
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/30 to-charcoal/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/50 to-charcoal/25" />
         {/* 装飾SVG: 後で差し替え */}
         <div className="relative z-10 max-w-6xl mx-auto px-4 w-full">
           {/* カテゴリラベル: 一目で何のサイトかわかる */}
@@ -779,7 +781,7 @@ export default function Home() {
         <a href="tel:076-436-0191" className="flex-1 bg-white text-forest font-bold text-center py-3 rounded-full text-sm">
           電話で予約
         </a>
-        <a href="#booking" className="flex-1 bg-gold text-white font-bold text-center py-3 rounded-full text-sm">
+        <a href="https://www.jalan.net/" target="_blank" rel="noopener noreferrer" className="flex-1 bg-gold text-white font-bold text-center py-3 rounded-full text-sm">
           じゃらんで予約
         </a>
       </div>
