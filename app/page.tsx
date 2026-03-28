@@ -47,7 +47,7 @@ export default function Home() {
         - 山シルエットSVG: /decorations/mountain-silhouette.svg
         - 葉装飾SVG: /decorations/leaf-branch.svg
       */}
-      <section className="relative min-h-[90vh] flex items-end pb-20 pt-32 md:pt-0 md:items-center overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-end pb-20 pt-32 md:pt-0 md:items-center overflow-hidden bg-charcoal">
         <img src="/kari/hero.jpg" alt="フットパス連絡橋を渡るガイドと参加者" className="absolute inset-0 w-full h-full object-cover hidden md:block" />
         <img src="/kari/hero-sp.jpg" alt="フットパス連絡橋を渡るガイドと参加者" className="absolute inset-0 w-full h-full object-cover md:hidden" />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/15 to-charcoal/5" />
