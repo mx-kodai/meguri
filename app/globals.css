@@ -28,6 +28,7 @@ body {
   font-family: var(--font-body), "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* 40代以降向け: 基本フォントサイズを大きめに */
