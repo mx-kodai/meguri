@@ -48,10 +48,8 @@ export default function Home() {
         - 葉装飾SVG: /decorations/leaf-branch.svg
       */}
       <section className="relative min-h-[90vh] flex items-end pb-20 pt-32 md:pt-0 md:items-center overflow-hidden">
-        <div className="absolute inset-0 img-placeholder border-0 rounded-none text-lg">
-          呉羽山フットパスを歩くガイドと参加者の後ろ姿<br />
-          その先に広がる立山連峰の大パノラマ（朝の光）
-        </div>
+        <img src="/kari/hero.jpg" alt="フットパス連絡橋を渡るガイドと参加者" className="absolute inset-0 w-full h-full object-cover hidden md:block" />
+        <img src="/kari/hero-sp.jpg" alt="フットパス連絡橋を渡るガイドと参加者" className="absolute inset-0 w-full h-full object-cover md:hidden" />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/20 to-charcoal/10" />
         {/* 装飾SVG: 後で差し替え */}
         <div className="relative z-10 max-w-6xl mx-auto px-4 w-full">
@@ -128,15 +126,9 @@ export default function Home() {
             </div>
             <div className="space-y-4">
               {/* <!-- 素材: フットパス連絡橋の空撮写真 --> */}
-              <div className="img-placeholder rounded-xl">
-                フットパス連絡橋（全長124m）の空撮写真<br />
-                吊橋と立山連峰を望む壮大な構図
-              </div>
+              <img src="/kari/footpath-bridge.jpg" alt="フットパス連絡橋（全長124m）の空撮写真" className="rounded-xl w-full object-cover" style={{ aspectRatio: "16/9" }} />
               {/* <!-- 素材: AMANDAN PEAK完成イメージ --> */}
-              <div className="img-placeholder rounded-xl">
-                AMANDAN PEAK 外観イメージ<br />
-                （全面ガラス張り・立山連峰を望む新施設）
-              </div>
+              <img src="/kari/amandan-peak.jpg" alt="AMANDAN PEAK 外観イメージ" className="rounded-xl w-full object-cover" style={{ aspectRatio: "16/9" }} />
             </div>
           </div>
         </div>
@@ -292,58 +284,58 @@ export default function Home() {
               time="10:00"
               title="富山駅 集合・出発"
               description="呉羽ハイツの無料送迎バスで出発。タクシーや自家用車での参加もOK。荷物はハイツに預けてから身軽に。"
-              image="富山駅北口のロータリー、送迎バス乗り場の写真"
+              image="/kari/day1-station.jpg"
             />
             <TimelineItem
               time="10:30"
               title="フットパス連絡橋・AMANDAN PEAK"
               description="全長124m、高さ28mの吊橋を空中散歩。東に立山連峰、西に二上山と新湊大橋。渡った先には2026年開業の「AMANDAN PEAK」。全面ガラス張りのラウンジで一息つきながら、桜の新品種「クレハオトメシダレ」が植えられた芝生広場を散策します。"
-              image="フットパス連絡橋を渡る参加者、背景に立山連峰の写真"
+              image="/kari/day1-bridge-walk.jpg"
               accent
             />
             <TimelineItem
               time="11:00"
               title="呉羽丘陵フットパス「呉羽山をのんびりと」コース"
               description="富山市おすすめの約1時間コースをマイスターと歩きます。こもれびの雑木林を抜け、しらとり広場・のぞみの丘のビューポイントへ。丘陵ならではの高低差で里山の豊かさを五感で味わう道。"
-              image="フットパスの木漏れ日の小道、雑木林を歩く参加者の写真"
+              image="/kari/day1-forest-path.jpg"
             />
             <TimelineItem
               time="12:00"
               title="呉羽山展望台"
               description="立山連峰3,000m級の大パノラマ。剱岳、立山、薬師岳が眼前に。北陸新幹線と山並みが共演する絶景は日本夜景遺産にも認定。天気がよければ富山湾から能登半島まで。"
-              image="展望台から見た立山連峰のパノラマ写真（残雪の山々）"
+              image="/kari/day1-panorama.jpg"
             />
             <TimelineItem
               time="12:30"
               title="呉羽エリアでランチ"
               description="呉羽山には立山連峰を望む眺望レストランがいくつも。当日の営業状況に合わせて、マイスターがおすすめのお店へご案内します。"
-              image="呉羽山の眺望レストランでの食事風景"
+              image="/kari/day1-lunch.jpg"
             />
             <TimelineItem
               time="14:00"
               title="五百羅漢（長慶寺）"
               description="50年の歳月をかけて彫られた535体の石仏。東向きの斜面に整然と並ぶ羅漢たちの向こうに、立山連峰が静かに佇みます。200年以上の時を経た石像ひとつひとつに、異なる表情が宿ります。"
-              image="五百羅漢の石仏群、苔むした石段の参道の写真"
+              image="/kari/day1-rakan.jpg"
               accent
             />
             <TimelineItem
               time="15:00"
               title="民俗民芸村と茶室 円山庵"
               description="9つの博物館施設が集まる文化ゾーン。篁牛人記念美術館で渇筆の水墨画に触れた後は、数寄屋造りの茶室で抹茶と和菓子をいただきます。窓の向こうに立山連峰。"
-              image="茶室の畳と抹茶、窓から見える立山連峰の写真"
+              image="/kari/day1-tearoom.jpg"
             />
             <TimelineItem
               time="16:30"
               title="呉羽ハイツ到着、展望風呂"
               description="富山平野を見下ろす展望露天風呂でゆっくりと。歩いた疲れを癒しながら、夕暮れの立山連峰を眺める至福の時間。"
-              image="呉羽ハイツの展望風呂から見る夕焼けの写真"
+              image="/kari/day1-onsen.jpg"
               accent
             />
             <TimelineItem
               time="18:30"
               title="夕食 — 劔会席"
               description="呉羽ハイツ自慢の会席料理。先付、焼八寸、お造り五種、台の物、揚物、蒸物、旬の釜飯にデザートまで。ホタルイカ、白エビ、地物の筍など、富山湾と山の幸を存分に。地酒とともに、旅の余韻を楽しむ夜。"
-              image="呉羽ハイツの劔会席（先付からデザートまでの品々）"
+              image="/kari/day1-kaiseki.jpg"
             />
           </div>
         </div>
@@ -375,9 +367,7 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 gap-6">
             {/* 朝：大きなカード（非対称） */}
             <div className="sm:col-span-2 grid sm:grid-cols-5 gap-0 bg-cream rounded-2xl overflow-hidden">
-              <div className="sm:col-span-2 img-placeholder rounded-none border-0">
-                朝焼けの展望風呂、朝食の和定食の写真
-              </div>
+              <img src="/kari/day2-morning.jpg" alt="朝焼けの展望風呂と朝食" className="sm:col-span-2 w-full h-full object-cover" style={{ aspectRatio: "16/9" }} />
               <div className="sm:col-span-3 p-6 flex flex-col justify-center">
                 <p className="text-stone text-sm mb-1">07:00</p>
                 <h3 className="font-[family-name:var(--font-heading)] text-charcoal text-xl font-bold mb-2">朝風呂と朝食</h3>
@@ -389,9 +379,7 @@ export default function Home() {
 
             {/* 午前前半: 城山→連絡橋（横長で一体感） */}
             <div className="sm:col-span-2 grid sm:grid-cols-2 gap-0 bg-cream rounded-2xl overflow-hidden">
-              <div className="img-placeholder rounded-none border-0">
-                城山公園の新緑と、佐々成政剃髪碑の写真
-              </div>
+              <img src="/kari/day2-castle.jpg" alt="城山公園の新緑" className="w-full h-full object-cover" style={{ aspectRatio: "16/9" }} />
               <div className="p-6 flex flex-col justify-center">
                 <p className="text-stone text-sm mb-1">09:00 — 10:30</p>
                 <h3 className="font-[family-name:var(--font-heading)] text-charcoal text-xl font-bold mb-2">城山公園からフットパス連絡橋へ</h3>
@@ -414,7 +402,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="sm:col-span-2 space-y-3">
-                <div className="img-placeholder rounded-lg">杉谷古墳群の森と墳丘の写真</div>
+                <img src="/kari/day2-kofun.jpg" alt="杉谷古墳群の森と墳丘" className="rounded-lg w-full object-cover" style={{ aspectRatio: "16/9" }} />
               </div>
             </div>
 
@@ -427,9 +415,7 @@ export default function Home() {
                   呉羽エリアでゆっくり昼食をとった後、富山駅まで送迎。2日間の旅が、日常への素敵なお土産になりますように。
                 </p>
               </div>
-              <div className="img-placeholder sm:w-48 rounded-xl shrink-0" style={{ aspectRatio: "3/2" }}>
-                カフェの窓際席、呉羽梨のデザートの写真
-              </div>
+              <img src="/kari/day2-dessert.jpg" alt="呉羽梨のデザート" className="sm:w-48 rounded-xl shrink-0 object-cover" style={{ aspectRatio: "3/2" }} />
             </div>
           </div>
         </div>
@@ -454,9 +440,7 @@ export default function Home() {
           </h2>
           {/* 春: 大きく見せる（メイン推し） */}
           <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <div className="img-placeholder rounded-xl border-white/20 ">
-              桜越しの立山連峰の写真<br />（クレハオトメシダレがあれば最高）
-            </div>
+            <img src="/kari/season-spring.jpg" alt="桜越しの立山連峰" className="rounded-xl w-full object-cover" style={{ aspectRatio: "16/9" }} />
             <div className="flex flex-col justify-center">
               <span className="font-[family-name:var(--font-heading)] text-gold-light text-4xl md:text-5xl font-bold">春</span>
               <span className="text-white/70 text-sm mt-1 mb-4">3月〜5月</span>
@@ -471,14 +455,12 @@ export default function Home() {
           {/* 夏・秋・冬: コンパクトに */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
-              { season: "夏", months: "6〜8月", description: "緑のトンネルを抜けるフットパス。木漏れ日の雑木林は天然のクーラー。", image: "新緑のフットパス木漏れ日の写真" },
-              { season: "秋", months: "9〜11月", description: "民俗民芸村の紅葉は圧巻。落ち葉の絨毯を踏みしめるフットパスは格別。", image: "民俗民芸村の紅葉と合掌造りの写真" },
-              { season: "冬", months: "12〜2月", description: "澄んだ空気で立山連峰がくっきり。展望風呂から雪化粧の山々を。", image: "雪景色の立山連峰と展望台の写真" },
+              { season: "夏", months: "6〜8月", description: "緑のトンネルを抜けるフットパス。木漏れ日の雑木林は天然のクーラー。", image: "/kari/season-summer.jpg" },
+              { season: "秋", months: "9〜11月", description: "民俗民芸村の紅葉は圧巻。落ち葉の絨毯を踏みしめるフットパスは格別。", image: "/kari/season-autumn.jpg" },
+              { season: "冬", months: "12〜2月", description: "澄んだ空気で立山連峰がくっきり。展望風呂から雪化粧の山々を。", image: "/kari/season-winter.jpg" },
             ].map((item) => (
               <div key={item.season}>
-                <div className="img-placeholder rounded-lg border-white/20 mb-3">
-                  {item.image}
-                </div>
+                <img src={item.image} alt={item.season} className="rounded-lg w-full object-cover mb-3" style={{ aspectRatio: "16/9" }} />
                 <p className="font-[family-name:var(--font-heading)] text-gold-light text-xl font-bold">{item.season}</p>
                 <p className="text-white/70 text-sm mb-2">{item.months}</p>
                 <p className="text-white/70 text-sm leading-relaxed">{item.description}</p>
@@ -592,13 +574,9 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="space-y-4">
               {/* <!-- 素材: 呉羽ハイツ外観の写真 --> */}
-              <div className="img-placeholder rounded-xl">
-                呉羽ハイツ外観（丘の上に佇む宿）の写真
-              </div>
+              <img src="/kari/hotel-exterior.jpg" alt="呉羽ハイツ外観" className="rounded-xl w-full object-cover" style={{ aspectRatio: "16/9" }} />
               {/* <!-- 素材: 展望風呂の写真 --> */}
-              <div className="img-placeholder rounded-xl">
-                展望露天風呂からの富山平野の眺望写真
-              </div>
+              <img src="/kari/hotel-bath.jpg" alt="展望露天風呂からの富山平野の眺望" className="rounded-xl w-full object-cover" style={{ aspectRatio: "16/9" }} />
             </div>
             <div className="flex flex-col justify-center">
               <h3 className="font-[family-name:var(--font-heading)] text-charcoal text-xl md:text-2xl font-bold mb-4">
@@ -756,10 +734,7 @@ export default function Home() {
           <div className="w-16 h-0.5 bg-gold/40 mx-auto mb-16" />
 
           {/* 地図プレースホルダー */}
-          <div className="img-placeholder rounded-xl mb-10 max-w-3xl mx-auto">
-            呉羽山エリアのイラストマップ<br />
-            （富山駅・呉羽ハイツ・展望台・五百羅漢・フットパス・連絡橋・古墳群の位置関係）
-          </div>
+          <img src="/kari/access-map.jpg" alt="呉羽山エリアのイラストマップ" className="rounded-xl mb-10 max-w-3xl mx-auto w-full object-cover" />
 
           {/* アクセス情報: テーブル形式 */}
           <div className="max-w-3xl mx-auto space-y-8">
@@ -842,8 +817,21 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="border-t border-white/10 pt-6 text-center text-xs">
-            <p>呉羽山めぐり</p>
+          {/* 活動協力 */}
+          <div className="border-t border-white/10 pt-6 mb-6">
+            <p className="text-white text-sm font-bold mb-2">活動協力</p>
+            <p className="text-sm">
+              <a href="https://toyamaphotomap.glide.page/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">ふふっと富山のフォトマップ</a>
+              <span className="mx-2">|</span>
+              <a href="https://x.com/toyama_photomap" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">X</a>
+              <span className="mx-2">|</span>
+              <a href="https://www.instagram.com/toyama_photomap/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
+            </p>
+            <p className="text-xs mt-1">富山大学都市デザイン学部 自主プロジェクト</p>
+          </div>
+          <div className="border-t border-white/10 pt-6 text-center text-xs space-y-2">
+            <a href="/privacy" className="hover:text-white transition-colors">プライバシーポリシー</a>
+            <p>&copy; 2026 ドリームブリッジくれは. All rights reserved.</p>
           </div>
         </div>
       </footer>
@@ -883,10 +871,7 @@ function TimelineItem({
         </p>
       </div>
       {/* 画像 */}
-      {/* <!-- 素材: {image} --> */}
-      <div className="img-placeholder rounded-xl">
-        {image}
-      </div>
+      <img src={image} alt={title} className="rounded-xl w-full h-full object-cover" style={{ aspectRatio: "16/9" }} />
     </div>
   );
 }
