@@ -50,7 +50,7 @@ export default function Home() {
       <section className="relative min-h-[90vh] flex items-end pb-20 pt-32 md:pt-0 md:items-center overflow-hidden">
         <img src="/kari/hero.jpg" alt="フットパス連絡橋を渡るガイドと参加者" className="absolute inset-0 w-full h-full object-cover hidden md:block" />
         <img src="/kari/hero-sp.jpg" alt="フットパス連絡橋を渡るガイドと参加者" className="absolute inset-0 w-full h-full object-cover md:hidden" />
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/20 to-charcoal/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/15 to-charcoal/5" />
         {/* 装飾SVG: 後で差し替え */}
         <div className="relative z-10 max-w-6xl mx-auto px-4 w-full">
           {/* カテゴリラベル: 一目で何のサイトかわかる */}
