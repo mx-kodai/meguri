@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-cream: #F7F3ED;
+  --color-cream-dark: #EDE7DB;
+  --color-forest: #2D5A3D;
+  --color-forest-light: #3D7A52;
+  --color-forest-pale: #E8F0EA;
+  --color-earth: #5A4A3A;
+  --color-earth-light: #8B7B6A;
+  --color-stone: #8A7A6A;
+  --color-gold: #B8964E;
+  --color-gold-light: #D4B876;
+  --color-charcoal: #2A2A2A;
+  --color-charcoal-light: #4A4A4A;
+  --color-warm-gray: #7A7268;
+  --color-mist: #F0EDE8;
+}
+
+:root {
+  --background: #F7F3ED;
+  --foreground: #2A2A2A;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 40代以降向け: 基本フォントサイズを大きめに */
+html {
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+/* スクロールスムーズ */
+html {
+  scroll-behavior: smooth;
+}
+
+/* セクション間の隙間防止 */
+section + section,
+section + div,
+div + section {
+  margin-top: -1px;
+}
+
+/* 画像プレースホルダー共通 — 16:9固定 */
+.img-placeholder {
+  background: linear-gradient(135deg, var(--color-forest-pale) 0%, var(--color-cream-dark) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-earth);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  padding: 1rem;
+  border: 2px dashed var(--color-stone);
+  border-radius: 0.5rem;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* テクスチャクラス — CSSパターンで背景装飾 */
+.texture-washi {
+  position: relative;
+}
+.texture-washi::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+.texture-grain {
+  position: relative;
+}
+.texture-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pattern-dots {
+  position: relative;
+}
+.pattern-dots::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--color-stone) 0.5px, transparent 0.5px);
+  background-size: 20px 20px;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.texture-topo {
+  position: relative;
+}
+.texture-topo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 50 Q35 30 50 50 T80 50' fill='none' stroke='%238A7A6A' stroke-width='0.5' opacity='0.06'/%3E%3Cpath d='M10 70 Q30 50 50 70 T90 70' fill='none' stroke='%238A7A6A' stroke-width='0.5' opacity='0.04'/%3E%3Cpath d='M15 30 Q35 10 55 30 T85 30' fill='none' stroke='%238A7A6A' stroke-width='0.5' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* タイムラインの左ライン装飾 */
+.timeline-line {
+  position: relative;
+}
+.timeline-line::before {
+  content: "";
+  position: absolute;
+  left: 2.5rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-forest) 0%, var(--color-gold-light) 50%, var(--color-forest) 100%);
+  opacity: 0.2;
+}
+@media (max-width: 767px) {
+  .timeline-line::before {
+    display: none;
+  }
+}
